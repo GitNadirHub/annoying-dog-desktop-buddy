@@ -12,9 +12,16 @@ FetchContent_Declare(SFML
     SYSTEM)
 FetchContent_MakeAvailable(SFML)
 
-add_executable(main src/main.cpp "src/menu.cpp")
+add_executable(main src/main.cpp "src/menu.cpp" "resource.h")
 target_compile_features(main PRIVATE cxx_std_17)
 
 target_compile_definitions(main PRIVATE SFML_STATIC)
 
 target_link_libraries(main PRIVATE SFML::Graphics SFML::Audio SFML::System)
+
+
+
+if (WIN32)
+    target_sources(main PRIVATE appicon.rc)
+    target_link_options(main PRIVATE "/SUBSYSTEM:WINDOWS")
+endif()

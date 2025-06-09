@@ -3,7 +3,6 @@
 #include <Windows.h>
 #include <tlhelp32.h>
 #include <string>
-#include <iostream>
 #include "menu.hpp"
 
 sf::Texture t_sleep("sprites/dog_sleep.png");
@@ -71,7 +70,7 @@ float fade = 255;
 
 sf::Clock deltaClock;
 
-int main()
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
     sf::RenderWindow window(sf::VideoMode({ 256, 384 }), "Annoying Dog Pet Thingy", sf::Style::None);
     startupSound.play();
