@@ -4,7 +4,7 @@ void Menu::open(sf::Vector2f pos)
 {
     position = pos;
     isOpen = true;
-}
+} //test
 
 void Menu::close() 
 {
