@@ -22,6 +22,5 @@ target_link_libraries(main PRIVATE SFML::Graphics SFML::Audio SFML::System)
 
 
 if (WIN32)
-    target_sources(main PRIVATE appicon.rc)
     target_link_options(main PRIVATE "/SUBSYSTEM:WINDOWS")
 endif()
